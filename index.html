@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comandos de Git</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: url("https://www.nettix.com.pe/wp-content/uploads/2020/02/img-1024x511.png");
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 20px;
+        margin: auto;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin: 5;
+        text-align: center;
+      }
+
+      table {
+        font-family: "Arial", sans-serif;
+        border-collapse: collapse;
+        width: 80%;
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+      }
+
+      .conclusion {
+        width: 78%;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        padding: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        text-align: left;
+        padding: 15px;
+      }
+
+      th {
+        background-color: #555;
+        color: #fff;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+        width: 80%;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo">Comandos de Git</h1>
+      <h3 class="titulo">Lista de comandos útiles para trabajar con Git</h3>
+    </header>
+    <div class="container">
+      <h1>Comandos de Git</h1>
+      <table>
+        <tr>
+          <th>Comando</th>
+          <th>Breve Descripción</th>
+          <th>Parámetros y Descripción</th>
+          <th>Ejemplo</th>
+        </tr>
+        <tr>
+          <td>git init</td>
+          <td>Inicializa un nuevo repositorio Git en el directorio actual.</td>
+          <td>-</td>
+          <td>git init</td>
+        </tr>
+        <tr>
+          <td>git clone</td>
+          <td>Clona un repositorio remoto en tu sistema local.</td>
+          <td><em>repository_url</em>: URL del repositorio remoto</td>
+          <td>git clone https://github.com/ejemplo/repo.git</td>
+        </tr>
+        <tr>
+          <td>git add</td>
+          <td>Agrega cambios al área de preparación (staging).</td>
+          <td><em>file_path</em>: Ruta del archivo a agregar</td>
+          <td>git add archivo.txt</td>
+        </tr>
+        <tr>
+          <td>git commit</td>
+          <td>
+            Crea un nuevo commit con los cambios en el área de preparación.
+          </td>
+          <td><em>-m "mensaje"</em>: Mensaje descriptivo del commit</td>
+          <td>git commit -m "Agrega cambios importantes"</td>
+        </tr>
+        <tr>
+          <td>git status</td>
+          <td>Muestra el estado actual de los archivos en el repositorio.</td>
+          <td>-</td>
+          <td>git status</td>
+        </tr>
+        <tr>
+          <td>git pull</td>
+          <td>
+            Obtiene los cambios del repositorio remoto y los fusiona con tu rama
+            local.
+          </td>
+          <td>-</td>
+          <td>git pull</td>
+        </tr>
+        <tr>
+          <td>git push</td>
+          <td>Sube los cambios locales al repositorio remoto.</td>
+          <td><em>remote</em>: Nombre del repositorio remoto</td>
+          <td>git push origin master</td>
+        </tr>
+        <tr>
+          <td>git branch</td>
+          <td>Lista todas las ramas en el repositorio.</td>
+          <td>-</td>
+          <td>git branch</td>
+        </tr>
+        <tr>
+          <td>git checkout</td>
+          <td>Cambia a una rama existente o crea una nueva.</td>
+          <td><em>branch_name</em>: Nombre de la rama a cambiar o crear</td>
+          <td>git checkout nueva_rama</td>
+        </tr>
+        <tr>
+          <td>git merge</td>
+          <td>Fusiona una rama con la rama actual.</td>
+          <td><em>branch_name</em>: Nombre de la rama a fusionar</td>
+          <td>git merge otra_rama</td>
+        </tr>
+        <tr>
+          <td>git log</td>
+          <td>Muestra el historial de commits.</td>
+          <td>-</td>
+          <td>git log</td>
+        </tr>
+        <tr>
+          <td>git diff</td>
+          <td>Muestra las diferencias entre commits o archivos.</td>
+          <td>
+            <em>commit_hash</em>: Hash del commit o <em>file_path</em>: Ruta del
+            archivo
+          </td>
+          <td>git diff commit1 commit2</td>
+        </tr>
+        <tr>
+          <td>git reset</td>
+          <td>
+            Desanexa commits o restablece cambios en el área de preparación.
+          </td>
+          <td>
+            <em>commit_hash</em>: Hash del commit o <em>file_path</em>: Ruta del
+            archivo
+          </td>
+          <td>git reset HEAD archivo.txt</td>
+        </tr>
+        <tr>
+          <td>git remote</td>
+          <td>Muestra los repositorios remotos configurados.</td>
+          <td>-</td>
+          <td>git remote -v</td>
+        </tr>
+        <tr>
+          <td>git fetch</td>
+          <td>Obtiene cambios del repositorio remoto sin fusionarlos.</td>
+          <td><em>remote</em>: Nombre del repositorio remoto</td>
+          <td>git fetch origin</td>
+        </tr>
+        <tr>
+          <td>git rebase</td>
+          <td>Reorganiza commits en una rama.</td>
+          <td><em>branch_name</em>: Rama a la que se rebasa</td>
+          <td>git rebase otra_rama</td>
+        </tr>
+        <tr>
+          <td>git tag</td>
+          <td>Crea, lista o verifica etiquetas.</td>
+          <td>-</td>
+          <td>git tag -a v1.0 -m "Versión 1.0"</td>
+        </tr>
+        <tr>
+          <td>git cherry-pick</td>
+          <td>Aplica un commit específico a una rama.</td>
+          <td><em>commit_hash</em>: Hash del commit</td>
+          <td>git cherry-pick abc123</td>
+        </tr>
+        <tr>
+          <td>git stash</td>
+          <td>Guarda cambios temporales sin hacer commit.</td>
+          <td>-</td>
+          <td>git stash save "Cambios temporales"</td>
+        </tr>
+        <tr>
+          <td>git remote add</td>
+          <td>Agrega un repositorio remoto.</td>
+          <td>
+            <em>remote_name</em>: Nombre del repositorio remoto,
+            <em>repository_url</em>: URL del repositorio remoto
+          </td>
+          <td>git remote add upstream https://github.com/upstream/repo.git</td>
+        </tr>
+        <tr>
+          <td>git remote remove</td>
+          <td>Elimina un repositorio remoto.</td>
+          <td><em>remote_name</em>: Nombre del repositorio remoto</td>
+          <td>git remote remove upstream</td>
+        </tr>
+        <tr>
+          <td>git clean</td>
+          <td>Elimina archivos no rastreados y directorios.</td>
+          <td>
+            <em>-n</em>: Mostrar lo que se eliminaría, <em>-f</em>: Eliminar
+            forzosamente
+          </td>
+          <td>git clean -n</td>
+        </tr>
+        <tr>
+          <td>git log --graph</td>
+          <td>Muestra el historial de commits en un formato gráfico.</td>
+          <td>-</td>
+          <td>git log --graph</td>
+        </tr>
+      </table>
+    </div>
+    <div class="conclusion">
+      <h2>Conclusión</h2>
+      <p>
+        Los comandos de Git son herramientas esenciales para el control de
+        versiones y la colaboración en proyectos de desarrollo de software. Esta
+        tabla proporciona una visión general de algunos de los comandos más
+        comunes utilizados en Git, junto con sus descripciones y ejemplos de
+        uso. Es importante entender cómo funcionan estos comandos y cómo se
+        pueden utilizar de manera efectiva para gestionar un repositorio Git y
+        colaborar con otros desarrolladores. La práctica constante y la
+        comprensión de los conceptos subyacentes son clave para aprovechar al
+        máximo Git en tus proyectos.
+      </p>
+    </div>
+    <footer>
+      <p>
+        &copy; 2023 Control de Versiones | Sitio creado por Andrés Sebastian
+        Ramos Rivera
+      </p>
+    </footer>
+  </body>
+</html>
